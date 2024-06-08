@@ -1,40 +1,62 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Geekster Dashboard with Next.js and Tailwind CSS
+
+## Description
+
+This project implements a secure and responsive web application using Next.js and Tailwind CSS. It features a login page and a protected advanced dashboard.
+
+## Features
+
+- **Login Page**: Allows users to log in with a username and password.
+- **Protected Dashboard**: Accessible only to authenticated users. 
+- **Responsive Design**: Ensured through Tailwind CSS, the application is responsive and looks good on both desktop and mobile devices.
+- **Logout Functionality**: Users can log out and be redirected to the login page.
+- **Middleware Protection**: Ensures that only authenticated users can access the dashboard.
+- **Session Management**: Authentication state is persisted across page reloads using cookies.
+
+## Approach
+
+1. **Authentication**: Implemented a simple hardcoded authentication mechanism using an API route for login and logout.
+2. **Protected Routes**: Used Next.js middleware to protect the dashboard route and redirect unauthenticated users to the login page.
+3. **State Management**: Managed authentication state using cookies to persist the user's login state across page reloads.
+4. **Styling**: Utilized Tailwind CSS for quick and efficient styling of the components to ensure a responsive design.
+5. **Componentization**: Broke down the dashboard into reusable components such as Sidebar, Table, Dynamic Columns for better code organization and maintainability.
+
+### Challenges
+
+- **State Persistence**: Ensuring that the authentication state persisted across page reloads required careful handling of cookies and server-side checks.
+- **Middleware Configuration**: Configuring the middleware to correctly handle route protection and redirects based on authentication state was critical for security.
+- **Responsive Design**: Ensuring the application looked good on various screen sizes required detailed styling adjustments with Tailwind CSS.
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- Node.js (>= 14.x)
+- npm (>= 6.x) or Yarn
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Installation
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+1. **Clone the repository:**
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+   ```sh
+   git clone https://github.com/Ojas13-git/geekster-dashboard.git
+   cd geekster-dashboard
+   
+2.**Install dependencies:**
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+   ```sh
+   npm install
+   or
+   yarn install
+   ```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+3.**Set up environment variables:**
+   
+4. **Start the development server:**
+   ```sh
+   npm run dev
+   # or
+   yarn dev
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
