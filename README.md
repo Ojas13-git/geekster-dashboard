@@ -41,10 +41,21 @@ This project implements a secure and responsive web application using Next.js an
    ```sh
    git clone https://github.com/Ojas13-git/geekster-dashboard.git
    cd geekster-dashboard
-2.
- ```sh
-npm install
-# or
-yarn install
+   
+2.**Install dependencies:**
 
- 3. 
+   ```sh
+   npm install
+   or
+   yarn install
+
+3.**Set up environment variables:**
+   
+4. **Start the development server:**
+   ```sh
+   npm run dev
+   # or
+   yarn dev
+
+
+
