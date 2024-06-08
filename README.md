@@ -48,7 +48,7 @@ This project implements a secure and responsive web application using Next.js an
    npm install
    or
    yarn install
-```
+   ```
 
 3.**Set up environment variables:**
    
