@@ -61,8 +61,10 @@ This project implements a secure and responsive web application using Next.js an
    ```
 
 5. **Authentication details:**
+   ```sh
    Username: admin
    password: admin123
+   ```
 
 
 **ScreenShots**
