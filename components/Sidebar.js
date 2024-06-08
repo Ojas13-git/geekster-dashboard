@@ -20,7 +20,7 @@ const menuItems = [
 ];
 
 const Sidebar = () => {
-  const [toggleCollapse, setToggleCollapse] = useState(false);
+  const [toggleCollapse, setToggleCollapse] = useState(true);
 
   const router = useRouter();
 
@@ -30,10 +30,10 @@ const Sidebar = () => {
   );
 
   const wrapperClasses = classNames(
-    "h-screen px-4 pt-8 pb-4 bg-light flex justify-between flex-col",
+    "h-screen px-4 pt-8 pb-4 bg-gray-200 flex justify-between flex-col ",
     {
-      ["w-80"]: !toggleCollapse,
-      ["w-20"]: toggleCollapse,
+      ["w-80 absolute z-50"]: !toggleCollapse,
+      ["w-20 relative"]: toggleCollapse,
     }
   );
 
@@ -57,6 +57,15 @@ const Sidebar = () => {
 
   const handleSidebarToggle = () => {
     setToggleCollapse(!toggleCollapse);
+
+    const overlay = document.getElementById('overlay');
+    if(!toggleCollapse){
+      overlay.style.display = "none";
+    }
+
+    else {
+      overlay.style.display = "block";
+    }
   };
 
 

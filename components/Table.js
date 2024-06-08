@@ -35,8 +35,8 @@ const Table = ({data, columns}) => {
         aria-label="Table navigation"
       >
         <span className="text-sm font-normal text-gray-500 dark:text-gray-400">
-          Showing <span className="font-semibold text-gray-900 dark:text-white">1-2</span> of{" "}
-          <span className="font-semibold text-gray-900 dark:text-white">2</span>
+          Showing <span className="font-semibold text-gray-900 dark:text-gray">1-2</span> of{" "}
+          <span className="font-semibold text-gray-900 dark:text-gray">2</span>
         </span>
         <ul className="inline-flex items-center -space-x-px">
           <li>

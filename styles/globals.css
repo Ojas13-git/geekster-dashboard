@@ -1,3 +1,25 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+#overlay{
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* background: rgba(255, 255, 255, 0.50); */
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 40;
+}
+
+@media only screen and (min-width: 375px) {
+    #filter_section{
+        display : flex;
+        flex-direction : column;
+    }
+  }
+  

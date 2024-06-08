@@ -45,9 +45,11 @@ const dashboard = () => {
 
   // console.log(filteredData);
   return (
-    <div className="h-screen flex flex-row justify-start">
+    <>
+    <div id="overlay" className="display-none"></div>
+    <div className="h-screen flex flex-row justify-start relative">
       <Sidebar />
-      <div className="bg-white flex-1 p-4 text-text border-1">
+      <div className="bg-white flex-auto w-64 p-4 text-text border-1 max-h-screen overflow-scroll">
         Waitlist
         {/* Threeinputs */}
         <div className="grid gap-6 mb-6 md:grid-cols-3">
@@ -79,9 +81,9 @@ const dashboard = () => {
             />
           </div>
         </div>
-        <div className="flex justify-between">
+        <div className="flex justify-between flex-row lg:flex-row sm:flex sm:flex-col" id="filter_section">
           {/* Add filter btn */}
-          <div className="flex items-start justify-start p-4 relative">
+          <div className="flex items-start justify-start p-4 relative ">
             <button
               id="dropdownDefault"
               onClick={()=>setShowFilter(!showFilter)}
@@ -123,11 +125,11 @@ const dashboard = () => {
           </div>
 
           {/* Search */}
-          <div className="flex items-end justify-end p-4">
+          <div className="flex items-end justify-end md:justify-start p-4">
             <label for="simple-search" class="sr-only">
               Search
             </label>
-            <div class="relative w-full">
+            <div class="relative w-full md:w-[60%]">
               <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
                 <svg
                   class="w-4 h-4 text-gray-500 dark:text-gray-400"
@@ -148,7 +150,7 @@ const dashboard = () => {
               <input
                 type="text"
                 id="simple-search"
-                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-80 ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-[100%] ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                 placeholder="Search branch name..."
                 required
               />
@@ -241,6 +243,9 @@ const dashboard = () => {
         
       </div>
     </div>
+    </>
+
+    
   );
 };
 
