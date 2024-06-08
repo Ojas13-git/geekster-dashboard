@@ -15,7 +15,7 @@ This project implements a secure and responsive web application using Next.js an
 
 ## Approach
 
-1. **Authentication**: Implemented a simple hardcoded authentication mechanism using an API route for login and logout.
+1. **Authentication**: Implemented a simple hardcoded authentication mechanism using Next in-built API route for login and logout.
 2. **Protected Routes**: Used Next.js middleware to protect the dashboard route and redirect unauthenticated users to the login page.
 3. **State Management**: Managed authentication state using cookies to persist the user's login state across page reloads.
 4. **Styling**: Utilized Tailwind CSS for quick and efficient styling of the components to ensure a responsive design.
