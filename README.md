@@ -9,7 +9,7 @@ This project implements a secure and responsive web application using Next.js an
 - **Login Page**: Allows users to log in with a username and password.
 - **Protected Dashboard**: Accessible only to authenticated users. 
 - **Responsive Design**: Ensured through Tailwind CSS, the application is responsive and looks good on both desktop and mobile devices.
-- **Logout Functionality**: Users can log out and be redirected to the login page.
+- **Logout Functionality**: Users can log out and be redirected to the login page which contains form validation for username and password.
 - **Middleware Protection**: Ensures that only authenticated users can access the dashboard.
 - **Session Management**: Authentication state is persisted across page reloads using cookies.
 
@@ -60,7 +60,13 @@ This project implements a secure and responsive web application using Next.js an
    yarn dev
    ```
 
+5. **Authentication details:**
+   Username: admin
+   password: admin123
+
+
 **ScreenShots**
+
 ![image](https://github.com/Ojas13-git/geekster-dashboard/assets/79032848/958ba552-2e33-49ad-84f5-63600f942711)
 
 ![image](https://github.com/Ojas13-git/geekster-dashboard/assets/79032848/d8412ed6-def2-463b-8d4c-cc5a2ca468a2)
