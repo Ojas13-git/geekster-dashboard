@@ -1,5 +1,3 @@
-// pages/index.js
-
 import { useState } from 'react';
 import { useRouter } from 'next/router';
 
@@ -7,11 +5,30 @@ export default function LoginPage() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
+  const [validationError, setValidationError] = useState('');
   const router = useRouter();
 
   async function handleSubmit(event) {
     event.preventDefault();
-    
+
+    // Basic form validation
+    if (!username || !password) {
+      setValidationError('Username and Password are required.');
+      return;
+    }
+
+    // Additional form validation
+    if (username.length < 3) {
+      setValidationError('Username must be at least 3 characters long.');
+      return;
+    }
+
+    const passwordPattern = /^(?=.*[0-9]).{6,}$/;
+    if (!passwordPattern.test(password)) {
+      setValidationError('Password must be at least 6 characters long and contain at least one number.');
+      return;
+    }
+
     const response = await fetch('/api/auth', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -29,6 +46,7 @@ export default function LoginPage() {
     <div className="min-h-screen flex items-center justify-center bg-gray-50">
       <div className="max-w-md w-full space-y-8">
         <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">Sign in to your account</h2>
+        {validationError && <p className="text-red-500">{validationError}</p>}
         {error && <p className="text-red-500">{error}</p>}
         <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
           <input type="hidden" name="remember" defaultValue="true" />
@@ -43,7 +61,10 @@ export default function LoginPage() {
                 className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
                 placeholder="Username"
                 value={username}
-                onChange={(e) => setUsername(e.target.value)}
+                onChange={(e) => {
+                  setUsername(e.target.value);
+                  setValidationError(''); // Clear validation error on input change
+                }}
               />
             </div>
             <div>
@@ -56,7 +77,10 @@ export default function LoginPage() {
                 className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
                 placeholder="Password"
                 value={password}
-                onChange={(e) => setPassword(e.target.value)}
+                onChange={(e) => {
+                  setPassword(e.target.value);
+                  setValidationError(''); // Clear validation error on input change
+                }}
               />
             </div>
           </div>
