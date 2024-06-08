@@ -51,12 +51,11 @@ This project implements a secure and responsive web application using Next.js an
    ```
 
 3.**Set up environment variables:**
+
    
 4. **Start the development server:**
    ```sh
    npm run dev
    # or
    yarn dev
-
-
-
+   ```
