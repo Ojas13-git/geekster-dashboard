@@ -81,7 +81,7 @@ const dashboard = () => {
             />
           </div>
         </div>
-        <div className="flex justify-between flex-row lg:flex-row sm:flex sm:flex-col" id="filter_section">
+        <div className="flex justify-between flex-row lg:flex lg:flex-row sm:flex sm:flex-col" id="filter_section">
           {/* Add filter btn */}
           <div className="flex items-start justify-start p-4 relative ">
             <button
