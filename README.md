@@ -59,3 +59,18 @@ This project implements a secure and responsive web application using Next.js an
    # or
    yarn dev
    ```
+
+**ScreenShots**
+![image](https://github.com/Ojas13-git/geekster-dashboard/assets/79032848/958ba552-2e33-49ad-84f5-63600f942711)
+
+![image](https://github.com/Ojas13-git/geekster-dashboard/assets/79032848/d8412ed6-def2-463b-8d4c-cc5a2ca468a2)
+
+![image](https://github.com/Ojas13-git/geekster-dashboard/assets/79032848/fc23e2a5-5d15-4167-8be4-d2a0c083109f)
+
+![image](https://github.com/Ojas13-git/geekster-dashboard/assets/79032848/ae4fa858-ff07-47df-8a3a-6a742cf88651)
+
+![image](https://github.com/Ojas13-git/geekster-dashboard/assets/79032848/238723a1-f70f-4d6f-a900-c994402945c6)
+
+
+
+
