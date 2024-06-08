@@ -11,7 +11,7 @@ This project implements a secure and responsive web application using Next.js an
 - **Responsive Design**: Ensured through Tailwind CSS, the application is responsive and looks good on both desktop and mobile devices.
 - **Logout Functionality**: Users can log out and be redirected to the login page which contains form validation for username and password.
 - **Middleware Protection**: Ensures that only authenticated users can access the dashboard.
-- **Session Management**: Authentication state is persisted across page reloads using cookies.
+- **Session Management**: Authentication state is persisted across page reloads using cookies. The session reloads in 1 hour.
 
 ## Approach
 
@@ -20,9 +20,10 @@ This project implements a secure and responsive web application using Next.js an
 3. **State Management**: Managed authentication state using cookies to persist the user's login state across page reloads.
 4. **Styling**: Utilized Tailwind CSS for quick and efficient styling of the components to ensure a responsive design.
 5. **Componentization**: Broke down the dashboard into reusable components such as Sidebar, Table, Dynamic Columns for better code organization and maintainability.
+6. **Extra functionalities**: Implemented a advance table with data and Dynamic columns.
 
 ### Challenges
-
+- **Integrating the Next built in APT**: I had never used it so reading the documentation and implementing it was a big task.
 - **State Persistence**: Ensuring that the authentication state persisted across page reloads required careful handling of cookies and server-side checks.
 - **Middleware Configuration**: Configuring the middleware to correctly handle route protection and redirects based on authentication state was critical for security.
 - **Responsive Design**: Ensuring the application looked good on various screen sizes required detailed styling adjustments with Tailwind CSS.
