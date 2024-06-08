@@ -1,13 +1,13 @@
-# Advanced Dashboard with Next.js and Tailwind CSS
+# Geekster Dashboard with Next.js and Tailwind CSS
 
 ## Description
 
-This project implements a secure and responsive web application using Next.js and Tailwind CSS. It features a login page and a protected advanced dashboard that includes user profile information, recent activities, and statistics. The dashboard is only accessible to authenticated users.
+This project implements a secure and responsive web application using Next.js and Tailwind CSS. It features a login page and a protected advanced dashboard.
 
 ## Features
 
 - **Login Page**: Allows users to log in with a username and password.
-- **Protected Dashboard**: Accessible only to authenticated users. Displays user profile, recent activities, and statistics.
+- **Protected Dashboard**: Accessible only to authenticated users. 
 - **Responsive Design**: Ensured through Tailwind CSS, the application is responsive and looks good on both desktop and mobile devices.
 - **Logout Functionality**: Users can log out and be redirected to the login page.
 - **Middleware Protection**: Ensures that only authenticated users can access the dashboard.
@@ -19,7 +19,7 @@ This project implements a secure and responsive web application using Next.js an
 2. **Protected Routes**: Used Next.js middleware to protect the dashboard route and redirect unauthenticated users to the login page.
 3. **State Management**: Managed authentication state using cookies to persist the user's login state across page reloads.
 4. **Styling**: Utilized Tailwind CSS for quick and efficient styling of the components to ensure a responsive design.
-5. **Componentization**: Broke down the dashboard into reusable components such as Navbar, Sidebar, UserProfile, RecentActivities, and Statistics for better code organization and maintainability.
+5. **Componentization**: Broke down the dashboard into reusable components such as Sidebar, Table, Dynamic Columns for better code organization and maintainability.
 
 ### Challenges
 
