@@ -82,7 +82,7 @@ const Sidebar = () => {
                 hidden: toggleCollapse,
               })}
             >
-              Front Desk
+              Geekster
             </span>
           </div>
           
