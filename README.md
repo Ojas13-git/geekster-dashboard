@@ -23,7 +23,7 @@ This project implements a secure and responsive web application using Next.js an
 6. **Extra functionalities**: Implemented a advance table with data and Dynamic columns.
 
 ### Challenges
-- **Integrating the Next built in APT**: I had never used it so reading the documentation and implementing it was a big task.
+- **Integrating the Next built in API**: I had never used it so reading the documentation and implementing it was a big task.
 - **State Persistence**: Ensuring that the authentication state persisted across page reloads required careful handling of cookies and server-side checks.
 - **Middleware Configuration**: Configuring the middleware to correctly handle route protection and redirects based on authentication state was critical for security.
 - **Responsive Design**: Ensuring the application looked good on various screen sizes required detailed styling adjustments with Tailwind CSS.
